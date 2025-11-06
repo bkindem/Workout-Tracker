@@ -1,14 +1,16 @@
-#import <vector>
-#import <string>
+#include <vector>
+#include <string>
+#include <fstream>
+
 class Exercise {
-    vector<double> Weight;
-    vector<int> reps;
+    std::vector<double> Weight;
+    std::vector<int> reps;
     int sets;
     int activity;
 public:
     Exercise();
-    ~Exercise();
+    //~Exercise();
     int findNum(std::string name);
     void dataFill();
-    void write(stringstream);
+    void write(std::ofstream &stringstream);
 };
