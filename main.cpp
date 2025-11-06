@@ -4,7 +4,7 @@
 void write(Workout& workout){
     std::ofstream writer;
     writer.open("workoutData", std::ios::app);
-    writer << "11-05-2025";//will eventually make more acurate
+    writer << "!11-05-2025";//will eventually make more acurate
     workout.write(writer);
 }
 
