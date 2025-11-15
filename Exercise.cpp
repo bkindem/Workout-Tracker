@@ -10,15 +10,19 @@ Exercise::Exercise() {
 //Exercise::~Exercise() = default;
 
 int Exercise::findNum(std::string name){
-    return 1;
+    return ActivityValues[name];
 }
 
 void Exercise::dataFill(){
     std::string nameTemp;
     std::cin.ignore();
     std::cout << "enter the name of the exercise: ";
-    std::getline(std::cin, nameTemp);
-    activity = findNum(nameTemp);
+    bool loopStop = false;
+    while (loopStop){
+        std::getline(std::cin, nameTemp);
+        activity = findNum(nameTemp);
+        if (activity != 0) loopStop = true;
+    }
     int setTemp;
     std::cout << "How many sets: ";
     std::cin >> setTemp;
